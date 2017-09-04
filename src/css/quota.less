@@ -1,0 +1,73 @@
+@import "./var.less";
+
+.quota {
+    .card {
+        position: relative;
+        &.two {
+            padding: 0 .35rem;
+        }
+        &.three {
+            padding: 0 .2rem;
+        }
+        .dec {
+            position: absolute;
+            width: 99%;
+            top: 52%;
+            text-align: center;
+            color: @text-color3;
+            .num {
+                color: @theme-color;
+                font-size: .40rem;
+            }
+        }
+    }
+    .bar-card {
+        padding: .28rem;
+        border-bottom: 1px solid #e0e0e0;
+        .title {
+            //font-size: @card-title-fsize;
+            margin-bottom: .36rem;
+        }
+        .bar {
+            position: relative;
+            width: 100%;
+            height: .16rem;
+            margin-bottom: .36rem;
+            .bar-bg {
+                height: 100%;
+                background-color: #eee;
+                border-radius: .2rem;
+            }
+            .bar-front {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 100%;
+                background-color: #51c693;
+                border-radius: .2rem;
+                transition: all .3s ease-out;
+            }
+        }
+        .addition {
+            font-size: .28rem;
+            .text {
+                color: @text-color3;
+                .num {
+                    color: @theme-color;
+                }
+            }
+            .detail {
+                color: @theme-color;
+                img {
+                    width: .3rem;
+                    margin-top: -.02rem;
+                    margin-left: .1rem;
+                }
+            }
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

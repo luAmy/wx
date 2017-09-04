@@ -1,0 +1,100 @@
+@import "../css/var.less";
+
+.section {
+    margin: 0 .28rem .3rem;
+    padding: .36rem .26rem;
+    background-color: #fff;
+    .sec-item {
+        position: relative;
+        margin-left: .6rem;
+        color: @text-color3;
+        font-size: @card-sub-fsize;
+        padding: .3rem 0;
+        border-bottom: 1px solid #e0e0e0;
+        .dot {
+            position: absolute;
+            top: .4rem;
+            width: .13rem;
+            height: .13rem;
+            border-radius: 50%;
+            margin-left: .08rem;
+            background-color: #e0e0e0;
+        }
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        &.current {
+            color: @theme-color;
+            .dot {
+                background-image: url('../img/dot-active.gif');
+                top: 0 !important;
+                width: .29rem;
+                height: .29rem;
+                margin-left: 0;
+                background-size: cover;
+                background-color: transparent;
+            }
+        }
+        .title {
+            display: inline-block;
+            //margin-bottom: .1rem;
+        }
+        p {
+            font-size: @sub-title-fsize;
+            margin-bottom: .12rem;
+            &:first-child {
+                margin-top: .38rem;
+            }
+        }
+        .time {
+            padding-top: .08rem;
+            font-size: .2rem;
+            &.single {
+                padding-top: 0;
+                margin-top: -.04rem;
+            }
+        }
+        .progress {
+            position: absolute;
+            width: .3rem;
+            height: 100%;
+            left: -.6rem;
+            top: -.02rem;
+            text-align: center;
+            .progress-line {
+                width: 1px;
+                height: 100%;
+                margin-left: .14rem;
+                background-color: #e0e0e0;
+            }
+        }
+    }
+}
+.section .sec-item {
+    &.current {
+        .progress {
+            top: 0;
+        }
+    }
+    &:not(.current):first-child {
+        .progress {
+            top: .06rem;
+            .dot {
+                top: 0;
+            }
+        }
+    }
+    &:last-child {
+        .progress {
+            margin-top: -.02rem;
+            height: .52rem;
+            .dot {
+                top: .4rem;
+            }
+        }
+    }
+}

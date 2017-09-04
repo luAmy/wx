@@ -1,0 +1,63 @@
+@import "../css/var.less";
+
+.bill {
+    .tabList {
+        padding: .28rem !important;
+        padding-top: 1.08rem !important;
+    }
+    .card {
+        padding: .3rem;
+        margin-bottom: .2rem;
+        background-color: #fff;
+        .icon {
+            width: .6rem;
+            margin: .04rem .2rem 0 -.04rem;
+        }
+        .main {
+            .upper {
+                line-height: 1;
+                min-height: .52rem;
+                .title {
+                    font-size: @cell-title-fsize;
+                    max-width: 73%;
+                    //height: .6rem;
+                    line-height: 1.2;
+                    margin-bottom: .16rem;
+                }
+                .date {
+                    margin-top: .02rem;
+                    font-size: @sub-title-fsize;
+                    color: @text-color3;
+                }
+            }
+            .lower {
+                height: .3rem;
+                line-height: .3rem;
+                .subtitle {
+                    margin-top: .02rem;
+                }
+            }
+        }
+    }
+}
+.baoxiao {
+    .card {
+        .main {
+            .upper {
+                .title {
+                    margin-bottom: .1rem;
+                }
+            }
+            .mid {
+                font-size: .24rem;
+                color: @text-color3;
+                margin-bottom: .06rem;
+            }
+            .lower {
+                .subtitle {
+                    line-height: .3rem;
+                }
+            }
+        }
+    }
+}
